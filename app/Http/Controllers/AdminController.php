@@ -81,6 +81,7 @@ class AdminController extends Controller
         try {
             $user->createUser([
                 'name' => $request->name,
+                'username' => $request->username,
                 'email' => $request->email,
                 'password' => Hash::make($request->password),
                 'role' => $role,
@@ -120,10 +121,19 @@ class AdminController extends Controller
 
     public function userUpdate(Request $request, User $user)
     {
+        Validations::userEditValidation($request, $user->id);
         DB::beginTransaction();
 
         try {
-            $user->updateUser($request->all());
+            $user->updateUser($request->except(['password', 'confirm_password']));
+
+            if(!empty($request->password)) {
+                $user->update([
+                    'password' => Hash::make($request->password),
+                ]);
+            }
+
+
             DB::commit();
 
             return \Res::update();

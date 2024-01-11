@@ -44,8 +44,9 @@ class InitUser extends Command
         if (!$user) {
             User::create([
                 'name'          => 'Admin',
+                'username'      => 'admin',
                 'email'         => 'admin@example.com',
-                'password'      => Hash::make('rahasia'),
+                'password'      => Hash::make('pass'),
                 'role'          => 2,
             ]);
         }

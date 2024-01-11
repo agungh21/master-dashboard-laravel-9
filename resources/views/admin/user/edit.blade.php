@@ -20,12 +20,18 @@
                             <span class="invalid-feedback"></span>
                         </div>
                         <div class="form-group">
-                            <label> Email </label>
-                            <input type="text" name="email" class="form-control" placeholder="Masukan Email"
-                                value="{{ $user->email }}" required>
+                            <label> Username </label>
+                            <input type="text" name="username" class="form-control" placeholder="Masukan Username"
+                                value="{{ $user->username }}" required>
                             <span class="invalid-feedback"></span>
                         </div>
-                        {{-- <div class="form-group">
+                        <div class="form-group">
+                            <label> Email </label>
+                            <input type="text" name="email" class="form-control" placeholder="Masukan Email"
+                                value="{{ $user->email }}">
+                            <span class="invalid-feedback"></span>
+                        </div>
+                        <div class="form-group">
                             <label> Password </label>
                             <input type="password" name="password" class="form-control" placeholder="Masukan Password">
                             <span class="invalid-feedback"></span>
@@ -35,7 +41,7 @@
                             <input type="password" name="password_confirmation" class="form-control"
                                 placeholder="Masukan Password">
                             <span class="invalid-feedback"></span>
-                        </div> --}}
+                        </div>
                         <div class="form-group">
                             <label> Role </label>
                             <select name="role" class="form-control" required>

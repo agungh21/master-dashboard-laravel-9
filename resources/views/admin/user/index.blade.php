@@ -19,7 +19,7 @@
                     <thead>
                         <tr>
                             <th> Name </th>
-                            <th> Email </th>
+                            <th> Username </th>
                             <th> Role </th>
                             <th width="100"> Aksi </th>
                         </tr>
@@ -28,7 +28,7 @@
                     <tfoot>
                         <tr>
                             <th> Tipe </th>
-                            <th> Email </th>
+                            <th> Username </th>
                             <th> Role </th>
                             <th width="100"> Aksi </th>
                         </tr>
@@ -59,8 +59,8 @@
                         name: "name",
                     },
                     {
-                        data: "email",
-                        name: "email",
+                        data: "username",
+                        name: "username",
                     },
                     {
                         data: "role",

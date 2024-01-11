@@ -16,6 +16,11 @@
                             <span class="invalid-feedback"></span>
                         </div>
                         <div class="form-group">
+                            <label> Username </label>
+                            <input type="text" name="username" class="form-control" placeholder="Masukan Username">
+                            <span class="invalid-feedback"></span>
+                        </div>
+                        <div class="form-group">
                             <label> Email </label>
                             <input type="text" name="email" class="form-control" placeholder="Masukan Email">
                             <span class="invalid-feedback"></span>

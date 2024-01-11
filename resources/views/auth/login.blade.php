@@ -9,10 +9,10 @@
                     <!-- <img class="mb-4" src="../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
                     <h1 class="h3 mb-3 font-weight-normal text-center">Masuk</h1>
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email"
-                            value="{{ old('email') }}" required autocomplete="email" autofocus>
-                        @error('email')
+                        <label for="username">Username</label>
+                        <input id="username" type="username" class="form-control @error('username') is-invalid @enderror" name="username"
+                            value="{{ old('username') }}" required autocomplete="username" autofocus>
+                        @error('username')
                             <div class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </div>

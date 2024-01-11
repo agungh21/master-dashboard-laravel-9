@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'role'
+        'name', 'email', 'password', 'role', 'username'
     ];
 
     /**
@@ -86,7 +86,7 @@ class User extends Authenticatable
 
     public static function dt()
     {
-        $data = self::where('created_at', '!=', NULL)->orderBy('created_at', 'desc');
+        $data = self::where('created_at', '!=', NULL);
         return \Datatables::eloquent($data)
             ->addColumn('action', function ($data) {
 
